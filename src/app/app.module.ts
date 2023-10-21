@@ -1,5 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+//IMPORT PARA EL TITULO
+import { TitleService } from './services/title.service';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -21,4 +23,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(private titleService: TitleService) {}
+
+  ngOnInit(): void {
+    //POSNE EL TITULO EN CADA VENTANA
+    this.titleService.setTitle('Título de la Página de Inicio');
+  }
+ }
