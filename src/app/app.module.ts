@@ -3,14 +3,16 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { InicioComponent } from './inicio/inicio.component';
-import { UserPerfilComponent } from './compomnents/user-perfil/user-perfil.component';
+import { InicioComponent } from './components/inicio/inicio.component'; 
+import { UserPerfilComponent } from './components/user-perfil/user-perfil.component'; 
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     InicioComponent,
-    UserPerfilComponent
+    UserPerfilComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
